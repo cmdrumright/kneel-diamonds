@@ -17,13 +17,17 @@ export const setSizeChoice = (choice) => {
 }
 
 export const placeOrder = async () => {
-    const postOptions = {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(transientState)
-    }
+    if (transientState.metalId > 0 && transientState.styleId > 0 && transientState.sizeId > 0) {
+        const postOptions = {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(transientState)
+        }
 
-    const response = await fetch("http://localhost:8088/orders", postOptions)
+        const response = await fetch("http://localhost:8088/orders", postOptions)
+    } else {
+        window.alert("Please fill out each option")
+    }
 }
