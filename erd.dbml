@@ -1,0 +1,24 @@
+Table style {
+    id int [pk, increment]
+    style string
+    price int
+}
+
+Table size {
+    id int [pk, increment]
+    carets string
+    price int
+}
+
+Table metal {
+    id int [pk, increment]
+    metal string
+    price int
+}
+
+Table order {
+    id int [pk, increment]
+    styleId int [ref: > style.id]
+    sizeId int [ref: > size.id]
+    metalId int [ref: > metal.id]
+}
