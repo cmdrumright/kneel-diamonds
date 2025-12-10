@@ -27,6 +27,10 @@ export const placeOrder = async () => {
         }
 
         const response = await fetch("http://localhost:8088/orders", postOptions)
+
+        const saveEvent = new CustomEvent("orderSaved")
+        document.dispatchEvent(saveEvent)
+
     } else {
         window.alert("Please fill out each option")
     }

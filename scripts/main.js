@@ -27,4 +27,6 @@ const render = async () => {
     `
 }
 
+document.addEventListener("orderSaved", render)
+
 render()
