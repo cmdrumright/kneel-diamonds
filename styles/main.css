@@ -1,0 +1,35 @@
+#options {
+    display: flex;
+}
+
+.items {
+    border: 2px dotted lightblue;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Radio buttons and form elements 
+input[type="radio"] {
+  margin-right: 0.5rem;
+  margin-left: 1.5rem;
+  transform: scale(1.2);
+  accent-color: var(--denim-medium);
+}
+*/
+
+/*
+Source - https://stackoverflow.com/a
+Posted by nanobar, modified by community. See post 'Timeline' for change history
+Retrieved 2025-12-10, License - CC BY-SA 4.0
+*/
+
+.Radio {
+  display: inline-flex;
+  align-items: center;
+}
+
+.Radio-Input {
+  margin: 0 0.5em 0;
+}
