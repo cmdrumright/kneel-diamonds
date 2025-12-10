@@ -94,6 +94,12 @@
       "styleId": 1,
       "sizeId": 3,
       "id": 4
+    },
+    {
+      "metalId": 4,
+      "styleId": 3,
+      "sizeId": 5,
+      "id": 5
     }
   ]
 }
