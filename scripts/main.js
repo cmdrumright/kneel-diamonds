@@ -1,13 +1,16 @@
 import { metalOptions } from "./metalOptions.js"
+import { styleOptions } from "./styleOptions.js"
 
 const container = document.querySelector("#container")
 
 const render = async () => {
     const metalsHTML = await metalOptions()
+    const stylesHTML = await styleOptions()
 
     container.innerHTML = `
         <section id="options">
             ${metalsHTML}
+            ${stylesHTML}
         </section>
     `
 }
