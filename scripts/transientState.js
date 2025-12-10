@@ -15,3 +15,15 @@ export const setStyleChoice = (choice) => {
 export const setSizeChoice = (choice) => {
     transientState.sizeId = choice
 }
+
+export const placeOrder = async () => {
+    const postOptions = {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(transientState)
+    }
+
+    const response = await fetch("http://localhost:8088/orders", postOptions)
+}
